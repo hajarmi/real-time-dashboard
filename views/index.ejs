@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Real-Time Analytics Dashboard</h1>
+        <div class="stats-container">
+            <div class="stat-block">
+                <p id="totalPrice" style="font-size: 40px; font-weight: bolder;">$0.00</p>
+                <i class="fa-solid fa-sack-dollar" style="font-size: 80px;"></i>  
+            </div>
+            <div class="stat-block">
+                 <p id="totalCustomers" style="font-size: 40px; font-weight: bolder;">0</p>
+                <i class="fa-solid fa-person" style="font-size: 80px;"></i>
+            </div>
+            <div class="stat-block">
+                <p id="totalQuantity" style="font-size: 40px; font-weight: bolder;">0 </p>
+                <i class="fa-brands fa-product-hunt" style="font-size: 80px;"></i>  
+            </div>
+        </div>
+        <!-- Container for charts -->
+        <div class="chart-container">
+            <div class="chart">
+                <p>Sales Volume by Category</p>
+                <canvas id="salesVolumeByCategoryChart" style="margin-top: 190px;"></canvas>
+            </div>
+            <div class="chart">
+                <p>Total Sales by Payment Method</p>
+                <canvas id="totalSalesByPaymentMethodChart"></canvas>
+            </div>
+            <div class="chart">
+                <p>Sales Over Time</p>
+                <canvas id="salesOverTimeChart" style="margin-top: 190px; "></canvas>
+            </div>
+            <div class="chart">
+                <p>Top Selling Products</p>
+                <canvas id="topSellingProductsChart"></canvas>
+            </div>
+            <div class="chart">
+                <p>Best Location Per Product</p>
+                <canvas id="bestLocationPerProductChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/js/dashboard.js"></script>
+</body>
+</html>
